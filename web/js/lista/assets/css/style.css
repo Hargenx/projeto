@@ -1,0 +1,86 @@
+div.complete {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10%;
+    overflow: auto;
+    max-width: 90%;
+    width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white;
+    text-align: center; /* Alinhe o conteúdo ao centro */
+}
+
+label {
+    margin: 10px 0;
+    width: 90%;
+    display: block;
+    font-size: 18px; /* Reduzir o tamanho da fonte em dispositivos menores */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+input {
+    padding: 10px;
+    width: 100%; /* Preenchimento total para se ajustar ao contêiner pai */
+    font-size: 18px; /* Reduzir o tamanho da fonte em dispositivos menores */
+}
+
+span {
+    color: red;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px; /* Reduzir o tamanho da fonte em dispositivos menores */
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: block; /* Mude para "display: block" para que o botão ocupe toda a largura da div */
+    margin-left: auto; /* Mova o botão para a direita */
+    margin-right: auto; /* Mova o botão para a esquerda */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    font-size: 18px;
+}
+
+div#tabelas {
+    max-height: 300px;
+    overflow: auto;
+    text-align: center; /* Alinhe o conteúdo ao centro */
+}
+
+table {
+    margin: 0 auto; /* Centralize a tabela horizontalmente */
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(44, 8, 222);
+    border-collapse: collapse;
+    font-size: 18px; /* Reduzir o tamanho da fonte em dispositivos menores */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    padding: 8px; /* Reduzir o preenchimento em dispositivos menores */
+}
+
+th {
+    width: 20%;
+}
+
+/* Adicionar uma regra de media query para dispositivos menores */
+@media (max-width: 768px) {
+    div.complete {
+        width: 90%; /* Ampliar a largura para preencher a tela em dispositivos menores */
+        padding: 5%;
+    }
+
+    label,
+    input,
+    span,
+    button {
+        font-size: 16px; /* Reduzir ainda mais o tamanho da fonte em dispositivos muito pequenos */
+    }
+}

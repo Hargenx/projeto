@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo - Materialize</title>
+    <script>
+        function Funcao1(string, timeLength) {
+            Materialize.toast(
+                '<em>' + string + '</em>', timeLength
+            );
+        }
+        function Funcao2(string, timeLength) {
+            Materialize.toast(
+                '<b>' + string + '</b>', timeLength, 'rounded'
+            );
+        }
+        function Funcao3(string, timeLength) {
+            Materialize.toast(
+                '<u>' + string + '<u>', timeLength
+            );
+        }
+    </script>
+</head>
+<body>
+    <body class="container">
+        <h4>Estudando 🎀  Materialize</h4>
+        <a class="btn" onclick="Funcao1('Alerta Enfatico!', 1500)">
+            Alerta enfatico!!
+        </a><br><br>
+    
+        <a class="btn" onclick="Funcao2('Alerta em negrito e aredondado!', 1500)">
+            Alerta em negrito e aredondado!!
+        </a><br><br>
+    
+        <a class="btn" onclick="Funcao3('Alerta sublinhado!', 1500)">
+            Alerta sublinhado!!
+        </a><br><br>
+    </body>
+</body>
+</html>

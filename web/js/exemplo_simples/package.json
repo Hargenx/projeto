@@ -1,0 +1,16 @@
+{
+  "name": "exemplo_simples",
+  "version": "1.0.0",
+  "description": "Exemplo com Módulo ES",
+  "scripts": {
+    "start": "npm run watch",
+    "watch": "es-dev-server"
+  },
+  "devDependencies": {
+    "es-dev-server": "^2.7.0"
+  },
+  "main": "main.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

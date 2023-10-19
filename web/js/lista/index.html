@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <script type="text/javascript" defer src="./assets/js/script.js"></script>
+    <script async src="a-script.js"></script>
+    <script defer src="d-script.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="complete">
+        <div class="form">
+            <label>Nome: <input id="nome" type="text"></label>
+            <label>Email: <input id="email" type="text"></label>
+            <span id="erro"></span>
+            <button onclick="publicarTabela()">Listar</button>
+        </div>
+        <div id="tabelas">
+            <table id="tabela">
+                <caption>Lista de candidatos</caption>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

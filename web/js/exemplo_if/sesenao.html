@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Saudação Personalizada</title>
+</head>
+
+<body>
+    <h1>Informe seu nome:</h1>
+
+    <form id="formulario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="mensagem" style="display: none;"></div>
+
+    <script>
+        // Obtenha o elemento do formulário e o elemento de mensagem
+        const formulario = document.getElementById("formulario");
+        const nomeInput = document.getElementById("nome");
+        const mensagem = document.getElementById("mensagem");
+
+        // Adicione um ouvinte de evento para o envio do formulário
+        formulario.addEventListener("submit", function (event) {
+            event.preventDefault(); // Evite o comportamento padrão do formulário
+
+            const nomeUsuario = nomeInput.value;
+
+            if (nomeUsuario) {
+                const saudacao = `Olá, ${nomeUsuario}! Bem-vindo(a) ao nosso site.`;
+                mensagem.textContent = saudacao;
+                mensagem.style.display = "block";
+            } else {
+                alert("Por favor, insira seu nome.");
+            }
+        });
+    </script>
+</body>
+
+</html>

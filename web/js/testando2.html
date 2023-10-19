@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jogo de Adivinhação</title>
+</head>
+
+<body>
+    <h1>Jogo de Adivinhação</h1>
+    <p>Digite um número entre 1 e 12:</p>
+    <input type="number" id="numeroEntrada">
+    <button onclick="verificarNumero()">Verificar</button>
+    <div id="resultado"></div>
+
+    <script>
+        const MIN = 1;
+        const MAX = 12;
+
+        let numeroSecreto = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+        let tentativas = 0;
+        let dicas = '';
+
+        function verificarNumero() {
+            let numero = parseInt(document.getElementById('numeroEntrada').value);
+            tentativas++;
+
+            if (numero === numeroSecreto) {
+                resultado = `Parabéns, você acertou o número secreto em ${tentativas} tentativas!`;
+            } else if (numero > numeroSecreto) {
+                resultado = `O número é menor que ${numero}`;
+            } else {
+                resultado = `O número é maior que ${numero}`;
+            }
+            document.getElementById('resultado').textContent = resultado;
+        }
+    </script>
+</body>
+
+</html>

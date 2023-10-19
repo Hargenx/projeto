@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo com Módulo ES</title>
+</head>
+<body>
+    <p id="estamos_entendendo">Clique no botão para mostrar a mensagem.</p>
+    <button id="botao">Clique-me</button>
+
+    <script type="module" src="module.js">
+        const mensagemElement = document.getElementById("estamos_entendendo");
+        const botaoElement = document.getElementById("botao");
+
+        botaoElement.addEventListener("click", function() {
+            estudarMais();
+            // Oculte o botão após o clique
+            botaoElement.style.display = "none";
+        });
+    </script>
+</body>
+</html>
