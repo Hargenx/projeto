@@ -35,12 +35,27 @@ li {
     margin: 5px 0;
 }
 
+button{
+    cursor: pointer;
+    background-color: #4CAF50;
+    padding: 7px 14px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    transition: all .3s ease;
+    }
+button:hover {
+    box-shadow: 0 6px 10px rgba(0,0,0,.1);
+    transform: translateY(-2px);
+}
+
 #botao {
     background-color: rgb(11, 39, 201);
     color: #fff;
-    padding: 5px 10px;
-    border: none;
     cursor: pointer;
+    padding: 7px 14px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    transition: all .3s ease;
 }
 
 #botao:hover {
@@ -57,4 +72,21 @@ a {
 
 a:hover {
     background-color: #0056b3;
+}
+
+.editar{
+    background-color: rgba(70, 114, 66, 0.5);
+
+}
+
+.editar:hover{
+    background-color: rgba(70, 114, 66, 0.7);
+}
+
+.excluir{
+    background-color: rgba(186, 21, 21, 0.5);
+}
+
+.excluir:hover{
+    background-color: rgba(186, 21, 21, 0.7);
 }

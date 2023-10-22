@@ -14,8 +14,8 @@
         $stmt = $pdo->query("SELECT * FROM jogos");
         while ($row = $stmt->fetch()) {
             echo "<li>{$row['nome']} (Plataforma: {$row['plataforma']}, Gênero: {$row['genero']})</li>";
-            echo "<a href='editar.php?id={$row['id']}'>Editar</a> ";
-            echo "<a href='excluir.php?id={$row['id']}'>Excluir</a></li>";
+            echo "<a href='editar.php?id={$row['id']}' class='editar'>Editar</a> ";
+            echo "<a href='excluir.php?id={$row['id']}' class='excluir'>Excluir</a></li>";
         }
         ?>
         <br><a href="index.html">Voltar</a>

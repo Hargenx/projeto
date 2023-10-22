@@ -26,7 +26,7 @@
         if ($jogo) {
             echo '<p>Tem certeza de que deseja excluir o jogo "' . $jogo['nome'] . '"?</p>';
             echo '<a href="excluir.php?id=' . $jogo['id'] . '&confirm=true">Sim</a>';
-            echo '<a href="listar.php">Não</a>';
+            echo '<a href="listar.php" class="excluir">Não</a>';
         } else {
             echo '<p>Jogo não encontrado.</p>';
         }
