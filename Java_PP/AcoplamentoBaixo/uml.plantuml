@@ -1,0 +1,14 @@
+@startuml Acoplamento baixo
+class Impressora {
+    +imprimir(conteudo: String)
+}
+
+class Aplicativo {
+    -impressora: Impressora
+
+    +Aplicativo(impressora: Impressora)
+    +imprimirDocumento(documento: String)
+}
+
+Impressora <|-- Aplicativo: usa 1
+@enduml

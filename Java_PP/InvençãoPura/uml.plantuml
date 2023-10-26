@@ -1,0 +1,20 @@
+@startuml Invenção Pura
+class Motor {
+    +ligar()
+}
+
+class Roda {
+    +girar()
+}
+
+class Carro {
+    -motor: Motor
+    -roda: Roda
+
+    +Carro(motor: Motor, roda: Roda)
+    +acelerar()
+}
+
+Motor <|-- Carro: usa 1
+Roda <|-- Carro: usa 1
+@enduml

@@ -1,0 +1,18 @@
+@startuml Variações Protegidas
+class Produto {
+    -nome: String
+    -preco: double
+
+    +Produto(nome: String, preco: double)
+    +getPreco(): double
+}
+
+class ProdutoComDesconto {
+    -desconto: double
+
+    +ProdutoComDesconto(nome: String, preco: double, desconto: double)
+    +getPreco(): double
+}
+
+Produto <|-- ProdutoComDesconto
+@enduml

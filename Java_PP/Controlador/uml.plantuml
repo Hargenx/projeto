@@ -1,0 +1,29 @@
+@startuml Controlador
+class LojaOnline {
+    -gerenciadorDePedidos: GerenciadorDePedidos
+    -gerenciadorDeEstoque: GerenciadorDeEstoque
+
+    +processarPedido(produtoId: int, quantidade: int)
+}
+
+class GerenciadorDePedidos {
+    +criarPedido(produtoId: int, quantidade: int): Pedido
+    +finalizarPedido(pedido: Pedido)
+}
+
+class Pedido {
+    -produtoId: int
+    -quantidade: int
+
+    +Pedido(produtoId: int, quantidade: int)
+}
+
+class GerenciadorDeEstoque {
+    +verificarDisponibilidade(produtoId: int, quantidade: int): boolean
+    +atualizarEstoque(produtoId: int, quantidade: int)
+}
+
+LojaOnline --> GerenciadorDePedidos: usa 1
+LojaOnline --> GerenciadorDeEstoque: usa 1
+GerenciadorDePedidos --> Pedido: cria 1
+@enduml

@@ -1,0 +1,24 @@
+@startuml Indireção
+interface Conector {
+    +conectar()
+}
+
+class ConectorUSB {
+    +conectar()
+}
+
+class ConectorBluetooth {
+    +conectar()
+}
+
+class Dispositivo {
+    -conector: Conector
+
+    +Dispositivo(conector: Conector)
+    +conectarDispositivo()
+}
+
+Conector <|.. ConectorUSB
+Conector <|.. ConectorBluetooth
+Conector <|-- Dispositivo: usa 1
+@enduml

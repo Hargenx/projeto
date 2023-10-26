@@ -1,0 +1,22 @@
+@startuml Especialista da informação
+class Cliente {
+    -nome: String
+    -pedidos: List<Pedido>
+
+    +Cliente(nome: String)
+    +adicionarPedido(pedido: Pedido)
+    +getNome(): String
+    +getPedidos(): List<Pedido>
+}
+
+class Pedido {
+    -numeroPedido: int
+    -valorTotal: double
+
+    +Pedido(numeroPedido: int, valorTotal: double)
+    +getNumeroPedido(): int
+    +getValorTotal(): double
+}
+
+Cliente --> Pedido: possui 0..*
+@enduml

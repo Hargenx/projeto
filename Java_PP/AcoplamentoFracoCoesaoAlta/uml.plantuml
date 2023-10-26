@@ -1,0 +1,36 @@
+@startuml Criador
+class GerenciadorDePagamentos {
+    +processarPagamento(carrinho: CarrinhoCompras, metodo: MetodoPagamento)
+}
+
+class CarrinhoCompras {
+    -itens: List<Produto>
+
+    +adicionarProduto(produto: Produto)
+    +calcularTotal(): double
+}
+
+class Produto {
+    -nome: String
+    -preco: double
+
+    +Produto(nome: String, preco: double)
+    +getPreco(): double
+}
+
+interface MetodoPagamento {
+    +efetuarPagamento(valor: double)
+}
+
+class CartaoCredito {
+    +efetuarPagamento(valor: double)
+}
+
+class PayPal {
+    +efetuarPagamento(valor: double)
+}
+
+GerenciadorDePagamentos --> CarrinhoCompras: usa 1
+GerenciadorDePagamentos --> MetodoPagamento: usa 1
+CarrinhoCompras --> Produto: contém 0..*
+@enduml

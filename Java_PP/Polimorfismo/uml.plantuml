@@ -1,0 +1,17 @@
+@startuml Polimorfismo
+
+interface Animal {
+    +emitirSom()
+}
+
+class Cachorro {
+    +emitirSom()
+}
+
+class Gato {
+    +emitirSom()
+}
+
+Animal <|.. Cachorro
+Animal <|.. Gato
+@enduml

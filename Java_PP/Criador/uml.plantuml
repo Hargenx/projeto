@@ -1,0 +1,16 @@
+@startuml Criador
+class FabricaDeCarros {
+    +criarCarro(modelo: String, cor: String): Carro
+}
+
+class Carro {
+    -modelo: String
+    -cor: String
+
+    +Carro(modelo: String, cor: String)
+    +getModelo(): String
+    +getCor(): String
+}
+
+FabricaDeCarros --> Carro: cria 1
+@enduml
