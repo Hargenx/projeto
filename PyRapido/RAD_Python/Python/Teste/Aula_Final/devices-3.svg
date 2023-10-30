@@ -1,0 +1,13 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 200px; height: 200px;"><style>
+     .line-devices3 {animation:line-devices3 3s infinite; stroke-dasharray: 60; stroke-dashoffset: 60;}
+     @keyframes line-devices3 {
+         20%{stroke-dashoffset: 60;}
+         60%{stroke-dashoffset: 0;}
+         100%{stroke-dashoffset: 0;}
+     }
+     @media (prefers-reduced-motion: reduce) {
+         .line-devices3 {
+             animation: none;
+         }
+     }
+    </style><g class="line-devices3" style="animation-duration: 3s;"><path class="fill1" d="M41 34H58C58.5523 34 59 34.4477 59 35V39.0693V61.2475V65C59 65.5523 58.5523 66 58 66H41C40.4477 66 40 65.5523 40 65V61.2475V39.0693V35C40 34.4477 40.4477 34 41 34Z" fill="#fff" stroke-width="2px"></path><path class="stroke1" d="M40 39.0693V35C40 34.4477 40.4477 34 41 34H58C58.5523 34 59 34.4477 59 35V39.0693M40 39.0693H59M40 39.0693V61.2475M59 39.0693V61.2475M40 61.2475V65C40 65.5523 40.4477 66 41 66H58C58.5523 66 59 65.5523 59 65V61.2475M40 61.2475H59" stroke="#000" stroke-width="2px"></path></g></svg>
