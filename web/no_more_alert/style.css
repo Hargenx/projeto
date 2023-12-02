@@ -1,0 +1,36 @@
+::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      magenta,
+      rebeccapurple,
+      dodgerblue,
+      green
+    );
+    opacity: 0.75;
+  }
+
+  #botao_modal{
+    width: 120px;
+    height: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 16px;
+    color: rgb(31, 7, 7);
+    text-align: center;
+    cursor: pointer;
+  }
+
+
+  #entrada{
+    margin: 10px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    outline: none;
+    resize: vertical;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+  }

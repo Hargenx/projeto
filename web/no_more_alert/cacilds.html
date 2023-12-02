@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <dialog id="nao_use_alert">
+        <h2>Modal com Controle</h2>
+        <label for="inputText">Digite algo:</label>
+        <input type="text" id="inputText">
+        <button onclick="mandaparahtml()">é isso</button>
+        <button onclick="fecharModal()">Fechar</button>
+    </dialog>
+    <button onclick="nao_use_alert.showModal()">NÃO USEM ALERT!!!!</button>
+    <div id="conteudoDigitado"></div>
+    <script>
+        const nao_use_alert = document.getElementById('nao_use_alert');
+        const textoInput = document.getElementById('inputText');
+        const conteudoDigitado = document.getElementById('conteudoDigitado');
+
+        function mandaparahtml(){
+            const texto = textoInput.value;
+            conteudoDigitado.textContent = `Texto digitado: ${texto}`;
+        }
+
+        function fecharModal() {
+            nao_use_alert.close();
+        }
+        nao_use_alert.addEventListener('click', function(event) {
+            if (event.target === nao_use_alert) {
+                nao_use_alert.close();
+            }
+        });
+    </script>
+</body>
+</html>
